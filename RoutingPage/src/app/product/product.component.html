@@ -1,1 +1,18 @@
-<p>product works!</p>
+<div class="container"> 
+  <div class="col">
+      <ul>
+        <li *ngFor="let product of products">
+              <div class="card-product" style="width:400px">
+                <img class="card-img-top" src="{{product.img}}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">{{ product.title }}</h4>
+                  <p class="card-text">{{ product.price }}</p>
+                  <a href="#" routerLink="" (click)="showProduct(product.id)" class="btn btn-primary">More</a>
+              </div>
+              <br>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
